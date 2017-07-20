@@ -1,0 +1,36 @@
+# maven ignore
+target/
+/src/main/webapp/WEB-INF/classes
+/src/main/webapp/WEB-INF/lib
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+
+# eclipse ignore
+# .settings/
+# .project
+# .classpath
+.externalToolBuilders/
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+logs/
+*.doc
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+*.class
