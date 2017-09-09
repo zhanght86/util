@@ -26,8 +26,7 @@ public abstract class MD5 {
      * @return 加密后字串
      */
     public static String md5File(String path) {
-        try (@SuppressWarnings("resource")
-        FileChannel ch = new FileInputStream(path).getChannel()) {
+        try (FileChannel ch = new FileInputStream(path).getChannel()){
             MappedByteBuffer byteBuffer = ch.map(FileChannel.MapMode.READ_ONLY, 0, ch.size());
             MessageDigest messageDigest = MessageDigest.getInstance("MD5");
             messageDigest.update(byteBuffer);
