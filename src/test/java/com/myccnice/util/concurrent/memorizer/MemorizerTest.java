@@ -11,9 +11,9 @@ public class MemorizerTest {
     @Test
     public void test() {
         long t1 = System.currentTimeMillis();
-        Memorizer<Integer, Integer> memorizer = new Memorizer<>(new MyComputer());
+        final Memorizer<Integer, Integer> memorizer = new Memorizer<>(new MyComputer());
         ExecutorService es = Executors.newCachedThreadPool();
-        CountDownLatch latch = new CountDownLatch(10);
+        final CountDownLatch latch = new CountDownLatch(10);
         for (int i = 0; i < 10; i++) {
             es.execute(new Runnable() {
                 @Override
